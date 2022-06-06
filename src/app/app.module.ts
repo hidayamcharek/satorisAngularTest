@@ -5,17 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CardComponent } from './card/card.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AgmCoreModule } from '@agm/core';
+import { SafePipe } from './safe.pipe';
 
 @NgModule({
-  declarations: [AppComponent, CardComponent],
+  declarations: [AppComponent, CardComponent, SafePipe],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    // AgmCoreModule.forRoot({
-
-    //   apiKey: 'AIzaSyAvcDy5ZYc2ujCS6TTtI3RYX5QmuoV8Ffw'
-    // })
+    AgmCoreModule.forRoot({
+       apiKey: 'AIzaSyCSUlRQMMCj1CtSiMs5mBHTC-vq2T996uo'
+     })
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -16,4 +16,9 @@ export class CardServiceService {
     const url = this.baseCardUrl;
     return this.http.get<any>(url);
   }
+
+  public getFriends(nbr: number): Observable<any> {
+    const url = this.baseCardUrl+"?results="+nbr;
+    return this.http.get<any>(url);
+  }
 }
